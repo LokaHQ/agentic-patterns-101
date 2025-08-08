@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13' and sys_platform != 'win32'",
@@ -36,7 +36,7 @@ requires-dist = [
     { name = "boto3", specifier = "==1.40.1" },
     { name = "loguru", specifier = "==0.7.3" },
     { name = "pydantic", specifier = "==2.11.7" },
-    { name = "strands-agents", specifier = "==1.2.0" },
+    { name = "strands-agents", specifier = "==1.3.0" },
     { name = "strands-agents-tools", specifier = "==0.2.3" },
 ]
 
@@ -1526,7 +1526,7 @@ wheels = [
 
 [[package]]
 name = "strands-agents"
-version = "1.2.0"
+version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
@@ -1540,9 +1540,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "watchdog" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/76/e8/ec29797d3dd9c813ff37e4810e2586e9dbf1fd51bc140aaa3d0c9c818ba1/strands_agents-1.2.0.tar.gz", hash = "sha256:6946252f7752e54a885e55960940496ff12a698ce45d6a2c82449a93399d3020", size = 243241, upload-time = "2025-07-30T14:39:54.95Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a0/d0/6f585f75d3cc164a9be0113105f52a82c58eb84206ec78db0ee0250a3c35/strands_agents-1.3.0.tar.gz", hash = "sha256:bca0926c1118ba3d4b21f74e620fa1b21defc2d495b081ec6c69fef912931893", size = 244373, upload-time = "2025-08-04T17:48:40.694Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b4/2c/d3e1b3548c0ae194e87c7e73a4a1e2480f70f49a4e6323a8a384fe312692/strands_agents-1.2.0-py3-none-any.whl", hash = "sha256:34ac7f5d2b756d0ac91011948c132796958e272c349dc3b84c52a146ab37346c", size = 170950, upload-time = "2025-07-30T14:39:52.979Z" },
+    { url = "https://files.pythonhosted.org/packages/c1/1b/a872130723c6124da01039fa71e6046b71cff9737ebb0e513a61c8f96f64/strands_agents-1.3.0-py3-none-any.whl", hash = "sha256:3c1b41128854ba4ae43f95a8c6c3b9b7c1ae84a9362f65f1df549eca612c9e81", size = 171591, upload-time = "2025-08-04T17:48:38.943Z" },
 ]
 
 [[package]]
