@@ -94,6 +94,6 @@ dev = [
     "pytest-asyncio==1.1.0",
     "pytest-mock==3.14.1",
     "ipykernel==6.30.0",
-    "ruff==0.12.7",
+    "ruff==0.12.8",
     "ty==0.0.1a8",
 ]
