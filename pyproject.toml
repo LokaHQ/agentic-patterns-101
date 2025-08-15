@@ -1,21 +1,34 @@
 [project]
 name = "agentic-patterns"
-version = "0.0.1"
+version = "1.0.0"
 description = "Agentic Patterns"
 authors = [
     { name = "Nina Cvetkovska", email = "nina.cvetkovska@loka.com" },
     { name = "Petar Kalinovski", email = "petar.kalinovski@loka.com" },
     { name = "Bojan Jakimovski - Shekswess", email = "bojan.jakimovski@loka.com" },
-    
+
 ]
+license = { text = "Apache-2.0" }
+license-files = ["LICENSE"]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "boto3==1.40.1",
-    "loguru==0.7.3",
     "pydantic==2.11.7",
     "strands-agents==1.2.0",
     "strands-agents-tools==0.2.3",
+]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Agentic Patterns",
+    "Strands Agents",
 ]
 
 [tool.ruff]
@@ -75,25 +88,8 @@ unused-ignore-comment = "warn"
 invalid-argument-type = "warn"
 invalid-parameter-default = "warn"
 unresolved-import = "warn"
+invalid-assignment = "warn"
 
-[tool.pytest.ini_options]
-python_files = "test_*.py"
-python_classes = "Test*"
-python_functions = "test_*"
-testpaths = ["tests"]
-asyncio_mode = "auto"
-markers = [
-    "live: marks tests that make live API calls (deselect with '-m \"not live\"')",
-    "asyncio: marks tests that use asyncio",
-]
 
 [dependency-groups]
-dev = [
-    "pre-commit==4.2.0",
-    "pytest==8.4.1",
-    "pytest-asyncio==1.1.0",
-    "pytest-mock==3.14.1",
-    "ipykernel==6.30.0",
-    "ruff==0.12.7",
-    "ty==0.0.1a8",
-]
+dev = ["pre-commit==4.2.0", "ipykernel==6.30.0", "ruff==0.12.7", "ty==0.0.1a8"]
