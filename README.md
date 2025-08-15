@@ -10,7 +10,7 @@
   </div>
 
   <h1>
-    Agentic Patterns 101 with Loka & Strands-Agents (AWS) 
+    Agentic Patterns 101 with Loka & Strands-Agents (AWS)
   </h1>
 
 </div>
