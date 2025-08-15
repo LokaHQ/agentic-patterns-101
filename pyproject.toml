@@ -1,7 +1,7 @@
 [project]
 name = "agentic-patterns"
 version = "1.0.0"
-description = "Agentic Patterns"
+description = "Agentic Patterns 101 with Loka & Strands-Agents (AWS)"
 authors = [
     { name = "Nina Cvetkovska", email = "nina.cvetkovska@loka.com" },
     { name = "Petar Kalinovski", email = "petar.kalinovski@loka.com" },
