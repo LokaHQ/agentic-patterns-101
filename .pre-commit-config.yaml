@@ -20,7 +20,6 @@ repos:
       - id: mixed-line-ending
       - id: requirements-txt-fixer
 
-repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.11.13
     hooks:
