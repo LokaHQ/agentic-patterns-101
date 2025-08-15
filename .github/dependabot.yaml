@@ -4,29 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: 'npm'
-    directory: '/'
-    schedule:
-      interval: 'weekly'
-    versioning-strategy: increase
-    groups:
-      aws-cdk-dependencies:
-        patterns:
-          - "aws-cdk*"
-          - "@aws-cdk/*"
-      eslint-dependencies:
-        patterns:
-          - eslint
-          - eslint-*
-          - "@eslint/*"
-          - "@eslint-community/*"
-          - "@typescript-eslint/*"
-      jest-dependencies:
-        patterns:
-          - jest
-          - ts-jest
-          - jest-*
-          - "@jest/*"
   - package-ecosystem: 'uv'
     directory: '/'
     schedule:
