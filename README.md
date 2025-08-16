@@ -1,19 +1,23 @@
-<div align="center">
-  <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <a href="https://loka.com">
-      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQGjlTZNkGk34w/company-logo_200_200/company-logo_200_200/0/1719824852415/loka_logo?e=2147483647&v=beta&t=b02H4t2HnGT1QvNFfSctVcPqMgaDojSW1OcJPA-Lk18" alt="Loka" width="105px" height="105px">
-    </a>
-    <span style="font-size: 24px; color: #666; margin: 0 10px;">×</span>
-    <a href="https://strandsagents.com">
-      <img src="https://strandsagents.com/latest/assets/logo-github.svg" alt="Strands Agents" width="55px" height="105px">
-    </a>
-  </div>
+<div align="center" style="display: flex; align-items: center; justify-content: center; gap: 30px;">
 
-  <h1>
-    Agentic Patterns 101 with Loka & Strands-Agents (AWS)
-  </h1>
+  <a href="https://loka.com">
+    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQGjlTZNkGk34w/company-logo_200_200/company-logo_200_200/0/1719824852415/loka_logo?e=2147483647&v=beta&t=b02H4t2HnGT1QvNFfSctVcPqMgaDojSW1OcJPA-Lk18"
+         alt="Loka" height="100px">
+  </a>
+
+  <span style="color: white; font-size: 40px; font-weight: bold; display: flex; align-items: center; justify-content: center;">×</span>
+
+  <a href="https://strandsagents.com">
+    <img src="https://strandsagents.com/latest/assets/logo-github.svg"
+         alt="Strands Agents" height="100px">
+  </a>
 
 </div>
+
+<h1 align="center">
+  Agentic Patterns 101 with Loka & Strands-Agents (AWS)
+</h1>
+
 
 Welcome to **Agentic Patterns 101** - a comprehensive collection of practical implementations demonstrating various agentic design patterns using [Strands-Agents](https://strandsagents.com).
 
