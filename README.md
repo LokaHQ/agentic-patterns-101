@@ -3,7 +3,7 @@
     <a href="https://loka.com">
       <img src="https://media.licdn.com/dms/image/v2/D4D0BAQGjlTZNkGk34w/company-logo_200_200/company-logo_200_200/0/1719824852415/loka_logo?e=2147483647&v=beta&t=b02H4t2HnGT1QvNFfSctVcPqMgaDojSW1OcJPA-Lk18" alt="Loka" width="105px" height="105px">
     </a>
-    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="×" width="24px" height="24px" style="opacity: 0.6;">
+    <span style="font-size: 24px; color: #666; margin: 0 10px;">×</span>
     <a href="https://strandsagents.com">
       <img src="https://strandsagents.com/latest/assets/logo-github.svg" alt="Strands Agents" width="55px" height="105px">
     </a>
