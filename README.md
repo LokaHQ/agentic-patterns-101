@@ -26,46 +26,38 @@ Whether you're building content generation pipelines, document processing system
 <table>
   <thead>
     <tr>
-      <th colspan="7" style="text-align: center; font-size: 1.5em; padding: 20px; background-color: #f8f9fa; border: 2px solid #dee2e6;">
+      <th colspan="5" style="text-align: center; font-size: 1.5em; padding: 20px; background-color: #f8f9fa; border: 2px solid #dee2e6;">
         <strong>Agentic Patterns</strong>
       </th>
     </tr>
     <tr>
       <th>Pattern</th>
-      <th>Description</th>
-      <th>Key Characteristics</th>
+      <th>Description & Key Characteristics</th>
       <th>Use Cases & Industries</th>
       <th>When to Use / When Not to Use</th>
-      <th>Implementation</th>
       <th>File Paths</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Sequential Workflow</strong><br>(Prompt Chaining)</td>
-      <td>Tasks completed step-by-step where each agent's output becomes input for the next.</td>
-      <td>• Linear sequence<br>• Each step depends on previous<br>• Minimal branching</td>
+      <td>Tasks completed step-by-step where each agent's output becomes input for the next.<br><br>• Linear sequence<br>• Each step depends on previous<br>• Minimal branching</td>
       <td><strong>Document generation:</strong> outline → content → validation<br><strong>Data processing:</strong> extract → transform → summarize<br><strong>Research:</strong> collect → synthesize → format</td>
       <td><strong>Use:</strong> Discrete, ordered steps<br><strong>Avoid:</strong> Need flexibility or parallel processing</td>
-      <td><strong>Function-based:</strong> Direct calls<br><strong>Tool-based:</strong> Strands workflow</td>
       <td><a href="./agentic-patterns/sequential-workflow.py"><code>sequential-workflow.py</code></a><br><a href="./agentic-patterns/sequential-workflow-tool.py"><code>sequential-workflow-tool.py</code></a></td>
     </tr>
     <tr>
       <td><strong>Parallel Workflow</strong></td>
-      <td>Multiple agents execute tasks simultaneously, often from shared input or preceding step output.</td>
-      <td>• Concurrent execution<br>• Shared/partitioned inputs<br>• Result coordination needed</td>
+      <td>Multiple agents execute tasks simultaneously, often from shared input or preceding step output.<br><br>• Concurrent execution<br>• Shared/partitioned inputs<br>• Result coordination needed</td>
       <td><strong>Content enrichment:</strong> draft + grammar check + fact-check in parallel<br><strong>Multi-perspective analysis:</strong> financial report + risk analysis + market sentiment</td>
       <td><strong>Use:</strong> Independent subtasks<br><strong>Avoid:</strong> Highly dependent outputs</td>
-      <td><strong>Tool-based:</strong> Strands parallel workflow</td>
       <td><a href="./agentic-patterns/parallel-workflow-tool.py"><code>parallel-workflow-tool.py</code></a></td>
     </tr>
     <tr>
       <td><strong>MCP Server Tools</strong></td>
-      <td>Model Context Protocol enables standardized communication between agents and external tools/services via MCP servers.</td>
-      <td>• Standardized communication<br>• Model-agnostic<br>• External tool integration<br>• System interoperability</td>
+      <td>Model Context Protocol enables standardized communication between agents and external tools/services via MCP servers.<br><br>• Standardized communication<br>• Model-agnostic<br>• External tool integration<br>• System interoperability</td>
       <td><strong>Enterprise data:</strong> ERP/CRM system access<br><strong>Knowledge retrieval:</strong> Vector DB queries<br><strong>Automation:</strong> Scheduling/ticketing APIs<br><strong>Healthcare:</strong> EHR/medical ontology access</td>
       <td><strong>Use:</strong> Structured external tool access<br><strong>Avoid:</strong> Self-contained tasks or simple API calls</td>
-      <td><strong>MCP-based:</strong> MCP client to standardized servers</td>
       <td><a href="./agentic-patterns/mcp-server-tools.py"><code>mcp-server-tools.py</code></a></td>
     </tr>
   </tbody>
