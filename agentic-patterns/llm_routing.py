@@ -4,6 +4,16 @@ from pydantic import BaseModel, Field
 from strands import Agent
 from strands.models import BedrockModel
 
+ROUTER_INSTRUCTION = """
+You are a helpful software development router that can route user queries to the appropriate agent.
+Based on the user's question, determine the complexity of the query as:
+simple, complex, or ambiguous.
+
+- Simple queries can retrieve factual information but lack reasoning for complex system design.
+- Complex queries require deeper understanding and reasoning about the system's architecture and design principles.
+- Ambiguous queries are unclear and may require clarification before they can be properly routed.
+"""
+
 
 class RouteType(Enum):
     """
@@ -22,17 +32,6 @@ class RouteResponse(BaseModel):
 
     type: RouteType
     message: str = Field(..., description="The response message")
-
-
-ROUTER_INSTRUCTION = """
-You are a helpful software development router that can route user queries to the appropriate agent.
-Based on the user's question, determine the complexity of the query as:
-simple, complex, or ambiguous.
-
-- Simple queries can retrieve factual information but lack reasoning for complex system design.
-- Complex queries require deeper understanding and reasoning about the system's architecture and design principles.
-- Ambiguous queries are unclear and may require clarification before they can be properly routed.
-"""
 
 
 if __name__ == "__main__":
