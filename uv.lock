@@ -14,7 +14,6 @@ version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "boto3" },
-    { name = "pre-commit" },
     { name = "pydantic" },
     { name = "strands-agents" },
     { name = "strands-agents-tools" },
@@ -31,7 +30,6 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "boto3", specifier = "==1.40.11" },
-    { name = "pre-commit", specifier = ">=4.2.0" },
     { name = "pydantic", specifier = "==2.11.7" },
     { name = "strands-agents", specifier = "==1.4.0" },
     { name = "strands-agents-tools", specifier = "==0.2.3" },
