@@ -35,8 +35,7 @@ simple, complex, or ambiguous.
 """
 
 
-# Main function to execute the routing process
-def main():
+if __name__ == "__main__":
     """
     Main function to execute the routing process.
     """
@@ -106,7 +105,3 @@ def main():
         agent_response = agent(user_query)
 
         print(f" Final response: {agent_response}")
-
-
-if __name__ == "__main__":
-    main()
