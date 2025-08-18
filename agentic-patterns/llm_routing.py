@@ -78,9 +78,9 @@ def main():
         agent=Agent(
             model=BedrockModel(
                 model_id="amazon.nova-lite-v1:0",
-                temperature=0.9,
+                temperature = 0.9,
             ),
-            system_prompt="You are a fast, efficient assistant for basic programming questions. Provide concise, accurate answers about syntax, commands, and simple explanations."
+            system_prompt = "You are a fast, efficient assistant for basic programming questions. Provide concise, accurate answers about syntax, commands, and simple explanations."
         )
 
         agent_response = agent(user_query)
