@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
         agent = Agent(
             model=BedrockModel(
-                model_id="amazon.nova-lite-v1:0",
+                model_id="amazon.nova-pro-v1:0",
                 temperature=0.9,
             ),
             system_prompt="You are a fast, efficient assistant for basic programming questions. Provide concise, accurate answers about syntax, commands, and simple explanations.",
