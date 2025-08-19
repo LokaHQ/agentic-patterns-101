@@ -100,10 +100,13 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 │   │   └── uv-ci.yaml                       # uv (python) Continuous Integration workflow
 │   └── dependabot.yaml                      # Configuration file for Dependabot
 ├── agentic-patterns/                        # Implementation directory
+|   ├── llm_routing.py                       # LLM Routing Implementation
 │   ├── mcp-server-tools.py                  # MCP server tools implementation
 │   ├── parallel-workflow-tool.py            # Tool-based parallel workflow implementation
+|   ├── reflection_pattern.py                # Reflection Pattern implementation
 │   ├── sequential-workflow-tool.py          # Tool-based sequential workflow implementation
-│   └── sequential-workflow.py               # Function-based sequential workflow implementation
+│   ├── sequential-workflow.py               # Function-based sequential workflow implementation
+|   └── swarm.py                             # Swarm pattern implementation
 ├── .gitignore                               # Git ignore patterns
 ├── .pre-commit-config.yaml                  # Pre-commit hooks configuration
 ├── .python-version                          # Python version specification
