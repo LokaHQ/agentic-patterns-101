@@ -60,7 +60,7 @@ Whether you're building content generation pipelines, document processing system
       • Centralized routing logic</td>
       <td><strong>Software development:</strong> syntax questions → lightweight models, architecture → reasoning models<br><strong>Customer support:</strong> FAQ → fast models, troubleshooting → specialized models</td>
       <td><strong>Use:</strong> Query complexity varies significantly, cost optimization important<br><strong>Avoid:</strong> Similar complexity levels across queries, routing overhead exceeds benefits</td>
-      <td><a href="./agentic-patterns/llm_routing.py"><code>llm_routing</code</a></td>
+      <td><a href="./agentic-patterns/llm_routing.py"><code>llm_routing.py</code</a></td>
     </tr>
     <tr>
       <td><strong>Reflection Pattern</strong></td>
@@ -69,7 +69,7 @@ Whether you're building content generation pipelines, document processing system
       • Quality enhancement through refinement</td>
       <td><strong>Creative content:</strong> draft → critique → refinement for scripts, marketing copy<br><strong>Code review:</strong> generate → analyze → refactor based on feedback<br><strong>Research:</strong> findings → critique → strengthen analysis</td>
       <td><strong>Use:</strong> Output quality critical, iterative improvement adds value<br><strong>Avoid:</strong> Simple tasks, feedback overhead exceeds improvement value</td>
-      <td><a href="./agentic-patterns/reflection_pattern.py"><code>reflection_pattern.py</code><td>
+      <td><a href="./agentic-patterns/reflection_pattern.py"><code>reflection_pattern.py</code></td>
     </tr>
     <tr>
       <td><strong>MCP Server Tools</strong></td>
