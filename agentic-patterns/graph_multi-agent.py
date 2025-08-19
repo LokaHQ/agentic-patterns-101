@@ -2,29 +2,35 @@ from strands import Agent
 from strands.multiagent import GraphBuilder
 from strands.models import BedrockModel
 
-ROUTER_INSTRUCTION = "Interpret the user's dinner request and dispatch tasks to appropriate agents."
-RECIPE_CREATOR_INSTRUCTION = "Propose a refined recipe suitable for the requested dinner style."
-BEVERAGE_SUGGESTOR_INSTRUCTION = "Suggest a beverage that complements the dinner style and recipe."
+ROUTER_INSTRUCTION = (
+    "Interpret the user's dinner request and dispatch tasks to appropriate agents."
+)
+RECIPE_CREATOR_INSTRUCTION = (
+    "Propose a refined recipe suitable for the requested dinner style."
+)
+BEVERAGE_SUGGESTOR_INSTRUCTION = (
+    "Suggest a beverage that complements the dinner style and recipe."
+)
 MUSIC_CURATOR_INSTRUCTION = "Curate a playlist that matches the dinner ambiance and enhances the dining experience."
 DINNER_PLANNER_INSTRUCTION = (
     "Combine the outputs from RecipeAgent, BeverageAgent, and MusicAgent into a single structured DinnerPlan object. "
-    "The DinnerPlan should have the following fields:\n\n"
-    "1. recipe: include all recipe details with subfields:\n"
-    "   - name (str)\n"
-    "   - ingredients (list of str)\n"
-    "   - preparation_time (int, in minutes)\n"
-    "   - instructions (str)\n\n"
-    "2. beverage: include beverage details with subfields:\n"
-    "   - name (str)\n"
-    "   - type (str, e.g., wine, cocktail, non-alcoholic)\n"
-    "   - pairing_notes (str, explaining why it pairs with the recipe)\n\n"
-    "3. music_playlist: include music details with subfields:\n"
-    "   - title (str)\n"
-    "   - tracks (list of objects, each with:\n"
-    "       - track_name (str)\n"
-    "       - artist (str)\n"
-    "       - genre (str, e.g., Classical, Jazz, Pop)\n"
-    "     )\n\n"    
+    "The DinnerPlan should have the following fields:"
+    "1. recipe: include all recipe details with subfields:"
+    "   - name (str)"
+    "   - ingredients (list of str)"
+    "   - preparation_time (int, in minutes)"
+    "   - instructions (str)"
+    "2. beverage: include beverage details with subfields:"
+    "   - name (str)"
+    "   - type (str, e.g., wine, cocktail, non-alcoholic)"
+    "   - pairing_notes (str, explaining why it pairs with the recipe)"
+    "3. music_playlist: include music details with subfields:"
+    "   - title (str)"
+    "   - tracks (list of objects, each with:"
+    "       - track_name (str)"
+    "       - artist (str)"
+    "       - genre (str, e.g., Classical, Jazz, Pop)"
+    "     )"
     "Return the combined DinnerPlan object in valid JSON format that matches the DinnerPlan Pydantic model exactly."
 )
 
