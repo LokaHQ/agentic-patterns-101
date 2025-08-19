@@ -1,6 +1,6 @@
 from strands import Agent
-from strands.multiagent import GraphBuilder
 from strands.models import BedrockModel
+from strands.multiagent import GraphBuilder
 
 ROUTER_INSTRUCTION = (
     "Interpret the user's dinner request and dispatch tasks to appropriate agents."
