@@ -78,6 +78,13 @@ Whether you're building content generation pipelines, document processing system
       <td><strong>Use:</strong> Structured external tool access<br><strong>Avoid:</strong> Self-contained tasks or simple API calls</td>
       <td><a href="./agentic-patterns/mcp-server-tools.py"><code>mcp-server-tools.py</code></a></td>
     </tr>
+    <tr>
+      <td><strong>Swarm</strong></td>
+      <td> Multiple specialized agents work together as autonomous peers through shared working memory and self-organizing coordination.<br><br>• Autonomous coordination without central control<br>• Shared working memory for all agents<br>• Dynamic task distribution based on discoveries<br>• Peer-to-peer handoffs</td>
+      <td><strong>Viral content creation:</strong> trend analysts, creators, copywriters collaborating fluidly<br><strong>Research investigation:</strong> specialists handing off based on emerging findings<br><strong>Crisis response:</strong> dynamic collaboration as situations evolve</td>
+      <td><strong>Use:</strong> Unpredictable outcomes, creative collaboration<br><strong>Avoid:</strong> Clear hierarchies, central coordination preferred</td>
+      <td><a href="./agentic-patterns/swarm.py"><code>swarm.py</code></a></td>
+    </tr>
   </tbody>
 </table>
 
