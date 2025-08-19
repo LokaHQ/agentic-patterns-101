@@ -54,6 +54,24 @@ Whether you're building content generation pipelines, document processing system
       <td><a href="./agentic-patterns/parallel-workflow-tool.py"><code>parallel-workflow-tool.py</code></a></td>
     </tr>
     <tr>
+      <td><strong>LLM Routing</strong></td>
+      <td>Automatically directs queries to the most appropriate model based on complexity, domain expertise, or computational requirements.<br><br>
+      • Dynamic model selection <br>
+      • Centralized routing logic</td>
+      <td><strong>Software development:</strong> syntax questions → lightweight models, architecture → reasoning models<br><strong>Customer support:</strong> FAQ → fast models, troubleshooting → specialized models</td>
+      <td><strong>Use:</strong> Query complexity varies significantly, cost optimization important<br><strong>Avoid:</strong> Similar complexity levels across queries, routing overhead exceeds benefits</td>
+      <td><a href="./agentic-patterns/llm_routing.py"><code>llm_routing</code</a></td>
+    </tr>
+    <tr>
+      <td><strong>Reflection Pattern</strong></td>
+      <td>Agent generates initial output, receives feedback from judge agent, then refines work through iterative improvement cycles.<br><br>
+      • Iterative improvement through feedback loops<<br>
+      • Quality enhancement through refinement</td>
+      <td><strong>Creative content:</strong> draft → critique → refinement for scripts, marketing copy<br><strong>Code review:</strong> generate → analyze → refactor based on feedback<br><strong>Research:</strong> findings → critique → strengthen analysis</td>
+      <td><strong>Use:</strong> Output quality critical, iterative improvement adds value<br><strong>Avoid:</strong> Simple tasks, feedback overhead exceeds improvement value</td>
+      <td><a href="./agentic-patterns/reflection_pattern.py"><code>reflection_pattern.py</code><td>
+    </tr>
+    <tr>
       <td><strong>MCP Server Tools</strong></td>
       <td>Model Context Protocol enables standardized communication between agents and external tools/services via MCP servers.<br><br>• Standardized communication<br>• Model-agnostic<br>• External tool integration<br>• System interoperability</td>
       <td><strong>Enterprise data:</strong> ERP/CRM system access<br><strong>Knowledge retrieval:</strong> Vector DB queries<br><strong>Automation:</strong> Scheduling/ticketing APIs<br><strong>Healthcare:</strong> EHR/medical ontology access</td>
