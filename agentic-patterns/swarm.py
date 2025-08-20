@@ -3,11 +3,13 @@ from strands.models import BedrockModel
 from strands.multiagent import Swarm
 from strands.types.content import ContentBlock
 
+# Agent prompts
 TREND_ANALYST_PROMPT = "You are a trend analyst who analyzes viral content. You can view images and videos to understand what visual elements are trending. Identify patterns in successful content and timing windows."
 MEME_CREATOR_PROMPT = "You are a visual meme creator who can both analyze existing memes and generate new ones. Create engaging visual content using trending formats. You can generate images and critique visual content."
 VIDEO_CREATOR_PROMPT = "You are a video content creator who can create new videos. Generate short-form videos and analyze what makes videos go viral on different platforms."
 COPYWRITER_PROMPT = "You are a social media copywriter. You can view images and videos to write appropriate captions and copy that matches the visual content."
 COMMUNITY_MANAGER_PROMPT = "You are a community manager who can analyze visual content and engagement patterns. You can view memes, videos, and posts to understand audience reactions."
+
 if __name__ == "__main__":
     """
     Main function to execute the swarm process.
