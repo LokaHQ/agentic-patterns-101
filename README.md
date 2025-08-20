@@ -53,11 +53,36 @@ Whether you're building content generation pipelines, document processing system
       <td><a href="./agentic-patterns/parallel-workflow-tool.py"><code>parallel-workflow-tool.py</code></a></td>
     </tr>
     <tr>
+      <td><strong>LLM Routing</strong></td>
+      <td>Automatically directs queries to the most appropriate model based on complexity, domain expertise, or computational requirements.<br><br>
+      • Dynamic model selection <br>
+      • Centralized routing logic</td>
+      <td><strong>Software development:</strong> syntax questions → lightweight models, architecture → reasoning models<br><strong>Customer support:</strong> FAQ → fast models, troubleshooting → specialized models</td>
+      <td><strong>Use:</strong> Query complexity varies significantly, cost optimization important<br><strong>Avoid:</strong> Similar complexity levels across queries, routing overhead exceeds benefits</td>
+      <td><a href="./agentic-patterns/llm_routing.py"><code>llm_routing.py</code</a></td>
+    </tr>
+    <tr>
+      <td><strong>Reflection Pattern</strong></td>
+      <td>Agent generates initial output, receives feedback from judge agent, then refines work through iterative improvement cycles.<br><br>
+      • Iterative improvement through feedback loops<<br>
+      • Quality enhancement through refinement</td>
+      <td><strong>Creative content:</strong> draft → critique → refinement for scripts, marketing copy<br><strong>Code review:</strong> generate → analyze → refactor based on feedback<br><strong>Research:</strong> findings → critique → strengthen analysis</td>
+      <td><strong>Use:</strong> Output quality critical, iterative improvement adds value<br><strong>Avoid:</strong> Simple tasks, feedback overhead exceeds improvement value</td>
+      <td><a href="./agentic-patterns/reflection_pattern.py"><code>reflection_pattern.py</code></td>
+    </tr>
+    <tr>
       <td><strong>MCP Server Tools</strong></td>
       <td>Model Context Protocol enables standardized communication between agents and external tools/services via MCP servers.<br><br>• Standardized communication<br>• Model-agnostic<br>• External tool integration<br>• System interoperability</td>
       <td><strong>Enterprise data:</strong> ERP/CRM system access<br><strong>Knowledge retrieval:</strong> Vector DB queries<br><strong>Automation:</strong> Scheduling/ticketing APIs<br><strong>Healthcare:</strong> EHR/medical ontology access</td>
       <td><strong>Use:</strong> Structured external tool access<br><strong>Avoid:</strong> Self-contained tasks or simple API calls</td>
       <td><a href="./agentic-patterns/mcp-server-tools.py"><code>mcp-server-tools.py</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Swarm</strong></td>
+      <td> Multiple specialized agents work together as autonomous peers through shared working memory and self-organizing coordination.<br><br>• Autonomous coordination without central control<br>• Shared working memory for all agents<br>• Dynamic task distribution based on discoveries<br>• Peer-to-peer handoffs</td>
+      <td><strong>Viral content creation:</strong> trend analysts, creators, copywriters collaborating fluidly<br><strong>Research investigation:</strong> specialists handing off based on emerging findings<br><strong>Crisis response:</strong> dynamic collaboration as situations evolve</td>
+      <td><strong>Use:</strong> Unpredictable outcomes, creative collaboration<br><strong>Avoid:</strong> Clear hierarchies, central coordination preferred</td>
+      <td><a href="./agentic-patterns/swarm.py"><code>swarm.py</code></a></td>
     </tr>
     <tr>
       <td><strong>Graph Multi-Agent Pattern</strong></td>
@@ -97,10 +122,13 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 ├── agentic-patterns/                        # Implementation directory
 │   ├── graph-multi-agent-tool.py            # Tool-based graph multi-agent implementation
 │   ├── graph-multi-agent.py                 # Graph multi-agent implementation
+|   ├── llm_routing.py                       # LLM Routing Implementation
 │   ├── mcp-server-tools.py                  # MCP server tools implementation
 │   ├── parallel-workflow-tool.py            # Tool-based parallel workflow implementation
+|   ├── reflection_pattern.py                # Reflection Pattern implementation
 │   ├── sequential-workflow-tool.py          # Tool-based sequential workflow implementation
-│   └── sequential-workflow.py               # Function-based sequential workflow implementation
+│   ├── sequential-workflow.py               # Function-based sequential workflow implementation
+|   └── swarm.py                             # Swarm pattern implementation
 ├── .gitignore                               # Git ignore patterns
 ├── .pre-commit-config.yaml                  # Pre-commit hooks configuration
 ├── .python-version                          # Python version specification
