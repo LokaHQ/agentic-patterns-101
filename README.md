@@ -5,7 +5,7 @@
          alt="Loka" height="100px">
   </a>
 
-  <span style="color: white; font-size: 40px; font-weight: bold; display: flex; align-items: center; justify-content: center;">×</span>
+<span style="color: white; font-size: 40px; font-weight: bold; display: flex; align-items: center; justify-content: center;">×</span>
 
   <a href="https://strandsagents.com">
     <img src="https://strandsagents.com/latest/assets/logo-github.svg"
@@ -17,7 +17,6 @@
 <h2 align="center">
   Agentic Patterns 101 with Loka & Strands-Agents (AWS)
 </h2>
-
 
 Welcome to **Agentic Patterns 101** - a comprehensive collection of practical implementations demonstrating various agentic design patterns using [Strands-Agents](https://strandsagents.com).
 
@@ -60,6 +59,27 @@ Whether you're building content generation pipelines, document processing system
       <td><strong>Use:</strong> Structured external tool access<br><strong>Avoid:</strong> Self-contained tasks or simple API calls</td>
       <td><a href="./agentic-patterns/mcp-server-tools.py"><code>mcp-server-tools.py</code></a></td>
     </tr>
+    <tr>
+      <td><strong>Graph Multi-Agent Pattern</strong></td>
+      <td>
+        A deterministic DAG-based orchestration model where each node is an agent (or custom multi-agent), and edges represent execution dependencies.
+        <br><br>
+        • Deterministic execution order<br>
+        • Clear dependency management<br>
+        • Nested patterns and custom node types<br>
+        • Conditional and multi-modal support
+      </td>
+      <td>
+        <strong>Financial analysis:</strong> fetch → analyze → summarize → report<br>
+        <strong>Content creation:</strong> research → draft → edit → publish<br>
+        <strong>IoT:</strong> monitor → diagnose → optimize → alert<br>
+        <strong>Healthcare:</strong> collect → analyze → diagnose → recommend<br>
+      </td>
+      <td><strong>Use:</strong> Complex workflows with clear agent dependencies<br><strong>Avoid:</strong> Simple pipelines better suited for Workflow pattern</td>
+      <td><a href="./agentic-patterns/graph-multi-agent.py"><code>graph-multi-agent.py</code></a>
+      <a href="./agentic-patterns/graph-multi-agent-tool.py"><code>graph-multi-agent-tool.py</code></a>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -75,6 +95,8 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 │   │   └── uv-ci.yaml                       # uv (python) Continuous Integration workflow
 │   └── dependabot.yaml                      # Configuration file for Dependabot
 ├── agentic-patterns/                        # Implementation directory
+│   ├── graph-multi-agent-tool.py            # Tool-based graph multi-agent implementation
+│   ├── graph-multi-agent.py                 # Graph multi-agent implementation
 │   ├── mcp-server-tools.py                  # MCP server tools implementation
 │   ├── parallel-workflow-tool.py            # Tool-based parallel workflow implementation
 │   ├── sequential-workflow-tool.py          # Tool-based sequential workflow implementation

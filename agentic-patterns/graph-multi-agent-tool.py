@@ -1,3 +1,4 @@
+"""Example of graph multi-agent pattern using the graph tool (strands tool package)."""
 from strands import Agent
 from strands.models import BedrockModel
 from strands_tools import graph

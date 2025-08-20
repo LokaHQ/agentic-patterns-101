@@ -1,3 +1,4 @@
+"""Example of a graph-based multi-agent workflow for generating a structured Dinner Plan."""
 from strands import Agent
 from strands.models import BedrockModel
 from strands.multiagent import GraphBuilder
