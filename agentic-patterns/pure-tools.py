@@ -1,6 +1,7 @@
+"""Example of pure tools usage for Trip Planning."""
+
+from strands import Agent, tool
 from strands.models import BedrockModel
-from strands import Agent
-from strands import tool
 
 SUGGESTION_INSTRUCTION = (
     "Suggest one specific, practical travel activity for {destination}."
@@ -64,7 +65,6 @@ def suggest_activity(destination: str, agent: Agent) -> str:
 
 
 if __name__ == "__main__":
-
     # Define the model for the agents
     model = BedrockModel(
         model_id="amazon.nova-lite-v1:0", temperature=0.7, max_tokens=3000
