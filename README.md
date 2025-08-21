@@ -105,6 +105,25 @@ Whether you're building content generation pipelines, document processing system
       <a href="./agentic-patterns/graph-multi-agent-tool.py"><code>graph-multi-agent-tool.py</code></a>
       </td>
     </tr>
+    <tr>
+      <td><strong>Pure Tools</strong></td>
+      <td>
+        A single-agent pattern where tools handle specific domain logic while the agent orchestrates their usage through natural language interactions.
+        <br><br>
+        • Simple agent-tool architecture<br>
+        • Natural language tool orchestration<br>
+        • Model-powered tool intelligence<br>
+        • Clean separation of concerns
+      </td>
+      <td>
+        <strong>E-commerce:</strong> Inventory management and order processing<br>
+        <strong>Data Management:</strong> create → read → update → delete → query<br>
+        <strong>HR systems:</strong> Employee onboarding and performance tracking<br>
+      </td>
+      <td><strong>Use:</strong> Domain-specific applications with clear tool boundaries and shared state<br><strong>Avoid:</strong> Complex multi-step workflows requiring multiple specialized agents</td>
+      <td><a href="./agentic-patterns/pure-tools.py"><code>pure-tools.py</code></a>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -125,6 +144,7 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 |   ├── llm_routing.py                       # LLM Routing Implementation
 │   ├── mcp-server-tools.py                  # MCP server tools implementation
 │   ├── parallel-workflow-tool.py            # Tool-based parallel workflow implementation
+│   ├── pure-tools.py                        # Pure tools implementation
 |   ├── reflection_pattern.py                # Reflection Pattern implementation
 │   ├── sequential-workflow-tool.py          # Tool-based sequential workflow implementation
 │   ├── sequential-workflow.py               # Function-based sequential workflow implementation
