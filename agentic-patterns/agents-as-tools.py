@@ -1,10 +1,11 @@
 """Example of agents as tools usage for HR Management."""
+
 import os
 
 from dotenv import load_dotenv
 from strands import Agent, tool
-from strands_tools import retrieve, http_request
 from strands.models import BedrockModel
+from strands_tools import http_request, retrieve
 
 # Define the model for the agents
 MODEL = BedrockModel(model_id="amazon.nova-lite-v1:0", temperature=0.7, max_tokens=3000)
@@ -17,23 +18,23 @@ os.environ["AWS_REGION"] = os.getenv("STRANDS_KNOWLEDGE_BASE_REGION")
 # Define prompts
 EMPLOYEE_DATA_PROMPT = """
 You are an Employee Data Specialist. You have access to employee records and company knowledge base.
-Use the retrieve tool to search for relevant information from company documents, org charts, 
+Use the retrieve tool to search for relevant information from company documents, org charts,
 job descriptions, and employee databases.
 
-Always be professional and respect employee privacy - only share information that would 
+Always be professional and respect employee privacy - only share information that would
 be appropriate for HR or management purposes.
 """
 
 HR_ORCHESTRATOR_PROMPT = """
-You are an HR Management Assistant that coordinates various HR functions. You have access to 
+You are an HR Management Assistant that coordinates various HR functions. You have access to
 specialized HR agents that can help with different aspects of human resources management:
 
 1. Employee Data Assistant - Employee records, organizational charts, department information
-2. Leave Management Assistant - PTO, vacation requests, sick leave, time off policies  
+2. Leave Management Assistant - PTO, vacation requests, sick leave, time off policies
 3. Performance Review Assistant - Performance reviews, goal setting, career development
 4. Recruitment Assistant - Hiring, job postings, candidate evaluation, recruitment strategy
 
-When you receive a query, determine which specialist(s) can best help and route the request 
+When you receive a query, determine which specialist(s) can best help and route the request
 appropriately. You can also coordinate between multiple specialists if needed for complex requests.
 
 Always maintain professionalism and respect employee privacy and confidentiality.
