@@ -7,9 +7,6 @@ from strands import Agent, tool
 from strands.models import BedrockModel
 from strands_tools import http_request, retrieve
 
-# Define the model for the agents
-MODEL = BedrockModel(model_id="amazon.nova-lite-v1:0", temperature=0.7, max_tokens=3000)
-
 # Define knowledge base
 load_dotenv()
 os.environ["KNOWLEDGE_BASE_ID"] = os.getenv("STRANDS_KNOWLEDGE_BASE_ID")
@@ -67,14 +64,14 @@ Focus on objective, constructive feedback aligned with company values and proces
 
 
 @tool
-def employee_data_assistant(query: str) -> str:
+def employee_data_assistant(query: str, agent: Agent) -> str:
     """
     Handle employee data queries like finding employee information, department searches,
     organizational charts, and basic employee record management.
     """
     try:
         employee_agent = Agent(
-            model=MODEL, system_prompt=EMPLOYEE_DATA_PROMPT, tools=[retrieve]
+            model=agent.model, system_prompt=EMPLOYEE_DATA_PROMPT, tools=[retrieve]
         )
 
         # Let the agent use retrieve to search company knowledge base
@@ -87,14 +84,14 @@ def employee_data_assistant(query: str) -> str:
 
 
 @tool
-def leave_management_assistant(query: str) -> str:
+def leave_management_assistant(query: str, agent: Agent) -> str:
     """
     Handle leave and PTO related queries including checking balances, submitting requests,
     approving time off, and providing leave policy information.
     """
     try:
         leave_agent = Agent(
-            model=MODEL, system_prompt=LEAVE_MANAGEMENT_PROMPT, tools=[retrieve]
+            model=agent.model, system_prompt=LEAVE_MANAGEMENT_PROMPT, tools=[retrieve]
         )
 
         # First search company knowledge base, then supplement with current data
@@ -107,14 +104,14 @@ def leave_management_assistant(query: str) -> str:
 
 
 @tool
-def performance_review_assistant(query: str) -> str:
+def performance_review_assistant(query: str, agent: Agent) -> str:
     """
     Handle performance review queries including review scheduling, performance analysis,
     goal setting, and career development planning.
     """
     try:
         performance_agent = Agent(
-            model=MODEL, system_prompt=PERFORMANCE_REVIEW_PROMPT, tools=[retrieve]
+            model=agent.model, system_prompt=PERFORMANCE_REVIEW_PROMPT, tools=[retrieve]
         )
 
         # Search company knowledge base first, then use current data
@@ -127,14 +124,14 @@ def performance_review_assistant(query: str) -> str:
 
 
 @tool
-def recruitment_assistant(query: str) -> str:
+def recruitment_assistant(query: str, agent: Agent) -> str:
     """
     Handle recruitment and hiring queries including job postings, candidate evaluation,
     interview processes, and hiring decisions.
     """
     try:
         recruitment_agent = Agent(
-            model=MODEL,
+            model=agent.model,
             system_prompt=RECRUITMENT_PROMPT,
             tools=[retrieve, http_request],
         )
@@ -146,9 +143,14 @@ def recruitment_assistant(query: str) -> str:
 
 
 if __name__ == "__main__":
+    # Define the model for the agents
+    model = BedrockModel(
+        model_id="amazon.nova-lite-v1:0", temperature=0.7, max_tokens=3000
+    )
+
     # Create the main orchestrator agent
     hr_orchestrator = Agent(
-        model=MODEL,
+        model=model,
         system_prompt=HR_ORCHESTRATOR_PROMPT,
         callback_handler=None,
         tools=[
