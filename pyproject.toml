@@ -16,7 +16,7 @@ dependencies = [
     "boto3==1.40.11",
     "pydantic==2.11.7",
     "strands-agents==1.4.0",
-    "strands-agents-tools==0.2.3",
+    "strands-agents-tools[use-browser]==0.2.4",
 ]
 classifiers = [
     "License :: OSI Approved :: Apache Software License",
