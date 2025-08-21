@@ -2,6 +2,13 @@
 
 from strands import Agent, tool
 from strands.models import BedrockModel
+from strands_tools.tavily import tavily_search
+from dotenv import load_dotenv
+import os
+
+# Retrieve the Tavily API key from environment
+load_dotenv()
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 SUGGESTION_INSTRUCTION = (
     "Suggest one specific, practical travel activity for {destination}."
@@ -78,6 +85,7 @@ if __name__ == "__main__":
             planner.add_destination,
             planner.add_activity,
             planner.view_itinerary,
+            tavily_search
         ],
         model=model,
     )
@@ -85,4 +93,5 @@ if __name__ == "__main__":
     # Example Usage
     response = agent("Add Tokyo as a destination from 2025-10-01 to 2025-10-07")
     response = agent("Suggest an activity for Tokyo and add it to my itinerary")
+    response = agent("Search for ratings for each item in the itinerary.")
     response = agent("Show me my complete travel itinerary")
