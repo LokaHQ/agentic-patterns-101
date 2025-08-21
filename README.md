@@ -124,6 +124,24 @@ Whether you're building content generation pipelines, document processing system
       <td><a href="./agentic-patterns/pure-tools.py"><code>pure-tools.py</code></a>
       </td>
     </tr>
+    <tr>
+      <td><strong>Agents as Tools</strong></td>
+      <td>
+        A multi-agent pattern where individual agents expose their capabilities as callable tools, enabling orchestration by a central agent or system.
+        <br><br>
+        • Agents encapsulate domain-specific intelligence<br>
+        • Flexible agent composition<br>
+        • Scalable, modular architecture
+      </td>
+      <td>
+        <strong>Customer Support:</strong> AI chatbots handling FAQs<br>
+        <strong>Finance:</strong> Loan processing agents or fraud detection agents<br>
+        <strong>Education:</strong> Adaptive learning agents or curriculum planning agents<br>
+      </td>
+      <td><strong>Use:</strong> Scenarios requiring multiple specialized agents to collaborate<br><strong>Avoid:</strong> Simple single-domain applications where one agent suffices</td>
+      <td><a href="./agentic-patterns/agents-as-tools.py"><code>agents-as-tools.py</code></a>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -139,6 +157,7 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 │   │   └── uv-ci.yaml                       # uv (python) Continuous Integration workflow
 │   └── dependabot.yaml                      # Configuration file for Dependabot
 ├── agentic-patterns/                        # Implementation directory
+│   ├── agents-as-tools.py                   # Agents as tools orchestration workflow
 │   ├── graph-multi-agent-tool.py            # Tool-based graph multi-agent implementation
 │   ├── graph-multi-agent.py                 # Graph multi-agent implementation
 |   ├── llm_routing.py                       # LLM Routing Implementation
