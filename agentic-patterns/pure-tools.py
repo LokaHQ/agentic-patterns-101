@@ -1,10 +1,11 @@
 """Example of pure tools usage for Trip Planning."""
 
+import os
+
+from dotenv import load_dotenv
 from strands import Agent, tool
 from strands.models import BedrockModel
 from strands_tools.tavily import tavily_search
-from dotenv import load_dotenv
-import os
 
 # Retrieve the Tavily API key from environment
 load_dotenv()
@@ -85,7 +86,7 @@ if __name__ == "__main__":
             planner.add_destination,
             planner.add_activity,
             planner.view_itinerary,
-            tavily_search
+            tavily_search,
         ],
         model=model,
     )
