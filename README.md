@@ -167,7 +167,9 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 |   ├── reflection_pattern.py                # Reflection Pattern implementation
 │   ├── sequential-workflow-tool.py          # Tool-based sequential workflow implementation
 │   ├── sequential-workflow.py               # Function-based sequential workflow implementation
-|   └── swarm.py                             # Swarm pattern implementation
+│   └── swarm.py                             # Swarm pattern implementation
+├── assets/                                  # Diagrams
+│   └── strands_agents_pattern.drawio       # Diagrams for strands agents pattern
 ├── .gitignore                               # Git ignore patterns
 ├── .pre-commit-config.yaml                  # Pre-commit hooks configuration
 ├── .python-version                          # Python version specification
