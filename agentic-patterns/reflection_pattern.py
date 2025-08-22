@@ -1,3 +1,5 @@
+"""Example of Reflection Pattern for iterative improvement of screenwriting."""
+
 from pydantic import BaseModel, Field
 from strands import Agent
 from strands.models import BedrockModel
