@@ -1,3 +1,5 @@
+"""Example of LLM Routing workflow for handling user queries based on complexity."""
+
 from enum import Enum
 
 from pydantic import BaseModel, Field

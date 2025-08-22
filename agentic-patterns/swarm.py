@@ -1,3 +1,5 @@
+"""Example of a viral content creation swarm"""
+
 from strands import Agent
 from strands.models import BedrockModel
 from strands.multiagent import Swarm
