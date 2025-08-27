@@ -15,7 +15,7 @@ requires-python = ">=3.12"
 dependencies = [
     "boto3==1.40.16",
     "pydantic==2.11.7",
-    "strands-agents==1.4.0",
+    "strands-agents==1.6.0",
     "strands-agents-tools[use-browser]==0.2.4",
 ]
 classifiers = [
