@@ -70,12 +70,49 @@ Whether you're building content generation pipelines, document processing system
       <td><strong>Use:</strong> Output quality critical, iterative improvement adds value<br><strong>Avoid:</strong> Simple tasks, feedback overhead exceeds improvement value</td>
       <td><a href="./agentic-patterns/reflection_pattern.py"><code>reflection_pattern.py</code></td>
     </tr>
+     <tr>
+      <td><strong>Pure Tools</strong></td>
+      <td>
+        A single-agent pattern where tools handle specific domain logic while the agent orchestrates their usage through natural language interactions.
+        <br><br>
+        • Simple agent-tool architecture<br>
+        • Natural language tool orchestration<br>
+        • Model-powered tool intelligence<br>
+        • Clean separation of concerns
+      </td>
+      <td>
+        <strong>E-commerce:</strong> Inventory management and order processing<br>
+        <strong>Data Management:</strong> create → read → update → delete → query<br>
+        <strong>HR systems:</strong> Employee onboarding and performance tracking<br>
+      </td>
+      <td><strong>Use:</strong> Domain-specific applications with clear tool boundaries and shared state<br><strong>Avoid:</strong> Complex multi-step workflows requiring multiple specialized agents</td>
+      <td><a href="./agentic-patterns/pure-tools.py"><code>pure-tools.py</code></a>
+      </td>
+    </tr>
     <tr>
       <td><strong>MCP Server Tools</strong></td>
       <td>Model Context Protocol enables standardized communication between agents and external tools/services via MCP servers.<br><br>• Standardized communication<br>• Model-agnostic<br>• External tool integration<br>• System interoperability</td>
       <td><strong>Enterprise data:</strong> ERP/CRM system access<br><strong>Knowledge retrieval:</strong> Vector DB queries<br><strong>Automation:</strong> Scheduling/ticketing APIs<br><strong>Healthcare:</strong> EHR/medical ontology access</td>
       <td><strong>Use:</strong> Structured external tool access<br><strong>Avoid:</strong> Self-contained tasks or simple API calls</td>
       <td><a href="./agentic-patterns/mcp-server-tools.py"><code>mcp-server-tools.py</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Agents as Tools</strong></td>
+      <td>
+        A multi-agent pattern where individual agents expose their capabilities as callable tools, enabling orchestration by a central agent or system.
+        <br><br>
+        • Agents encapsulate domain-specific intelligence<br>
+        • Flexible agent composition<br>
+        • Scalable, modular architecture
+      </td>
+      <td>
+        <strong>Customer Support:</strong> AI chatbots handling FAQs<br>
+        <strong>Finance:</strong> Loan processing agents or fraud detection agents<br>
+        <strong>Education:</strong> Adaptive learning agents or curriculum planning agents<br>
+      </td>
+      <td><strong>Use:</strong> Scenarios requiring multiple specialized agents to collaborate<br><strong>Avoid:</strong> Simple single-domain applications where one agent suffices</td>
+      <td><a href="./agentic-patterns/agents-as-tools.py"><code>agents-as-tools.py</code></a>
+      </td>
     </tr>
     <tr>
       <td><strong>Swarm</strong></td>
@@ -103,43 +140,6 @@ Whether you're building content generation pipelines, document processing system
       <td><strong>Use:</strong> Complex workflows with clear agent dependencies<br><strong>Avoid:</strong> Simple pipelines better suited for Workflow pattern</td>
       <td><a href="./agentic-patterns/graph-multi-agent.py"><code>graph-multi-agent.py</code></a>
       <a href="./agentic-patterns/graph-multi-agent-tool.py"><code>graph-multi-agent-tool.py</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Pure Tools</strong></td>
-      <td>
-        A single-agent pattern where tools handle specific domain logic while the agent orchestrates their usage through natural language interactions.
-        <br><br>
-        • Simple agent-tool architecture<br>
-        • Natural language tool orchestration<br>
-        • Model-powered tool intelligence<br>
-        • Clean separation of concerns
-      </td>
-      <td>
-        <strong>E-commerce:</strong> Inventory management and order processing<br>
-        <strong>Data Management:</strong> create → read → update → delete → query<br>
-        <strong>HR systems:</strong> Employee onboarding and performance tracking<br>
-      </td>
-      <td><strong>Use:</strong> Domain-specific applications with clear tool boundaries and shared state<br><strong>Avoid:</strong> Complex multi-step workflows requiring multiple specialized agents</td>
-      <td><a href="./agentic-patterns/pure-tools.py"><code>pure-tools.py</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Agents as Tools</strong></td>
-      <td>
-        A multi-agent pattern where individual agents expose their capabilities as callable tools, enabling orchestration by a central agent or system.
-        <br><br>
-        • Agents encapsulate domain-specific intelligence<br>
-        • Flexible agent composition<br>
-        • Scalable, modular architecture
-      </td>
-      <td>
-        <strong>Customer Support:</strong> AI chatbots handling FAQs<br>
-        <strong>Finance:</strong> Loan processing agents or fraud detection agents<br>
-        <strong>Education:</strong> Adaptive learning agents or curriculum planning agents<br>
-      </td>
-      <td><strong>Use:</strong> Scenarios requiring multiple specialized agents to collaborate<br><strong>Avoid:</strong> Simple single-domain applications where one agent suffices</td>
-      <td><a href="./agentic-patterns/agents-as-tools.py"><code>agents-as-tools.py</code></a>
       </td>
     </tr>
   </tbody>
