@@ -92,4 +92,4 @@ invalid-assignment = "warn"
 
 
 [dependency-groups]
-dev = ["pre-commit==4.2.0", "ipykernel==6.30.0", "ruff==0.12.9", "ty==0.0.1a8"]
+dev = ["pre-commit==4.2.0", "ipykernel==6.30.0", "ruff==0.12.11", "ty==0.0.1a8"]
